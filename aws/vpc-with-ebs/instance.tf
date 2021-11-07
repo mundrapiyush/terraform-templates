@@ -16,3 +16,7 @@ resource "aws_volume_attachment" "example-ebs-vol-attachment" {
     volume_id   = aws_ebs_volume.example-ebs-vol.id
     instance_id = aws_instance.example.id
 }
+
+output "example_public_ip" {
+    value = aws_instance.example.public_ip
+}
